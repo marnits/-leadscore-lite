@@ -1,5 +1,5 @@
 {
-  "name": "recruitment-task",
+  "name": "leadscore-lite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +8,9 @@
     "react-redux": "^6.0.1",
     "react-scripts": "2.1.5",
     "redux": "^4.0.1",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "redux-observable": "^1.0.0",
+    "rxjs": "^6.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
