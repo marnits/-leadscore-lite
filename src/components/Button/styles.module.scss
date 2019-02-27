@@ -1,0 +1,35 @@
+.Button {
+  padding: 5px 16px;
+  min-width: 60px;
+  vertical-align: baseline;
+  font-size: 13px;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 6px;
+  color: #33312e;
+  cursor: pointer;
+  outline: none;
+  text-shadow: none;
+}
+
+.Button:hover:not(.disabled) {
+  filter: brightness(97%);
+}
+
+.Button:active:not(.disabled) {
+  box-shadow: inset 1px 1px 7px 0px rgba(84,84,84,0.2);
+}
+
+.Button.primary {
+  background-image: linear-gradient(to bottom, #ffd532, #ffb500);
+}
+
+.Button.secondary {
+  background-image: linear-gradient(to bottom, #e4dfdf, #c0c0c0);
+}
+
+.Button.disabled, .Button.primary.disabled, .Button.secondary.disabled {
+  background-image: linear-gradient(to bottom, #f1efef, #dcdcdc);
+  color: #b5b3b3;
+  cursor: auto;
+}

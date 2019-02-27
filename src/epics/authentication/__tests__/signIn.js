@@ -9,7 +9,11 @@ import signIn from '../signIn';
 describe('signIn epic', () => {
   test('should get SIGN_IN_SUCCESS action', (done) => {
     const response = {
-      token: 'token',
+      response: {
+        token: {
+          authToken: 'token',
+        },
+      },
     };
 
     const ajax = () => ActionsObservable.of(response);
@@ -25,7 +29,9 @@ describe('signIn epic', () => {
     const expectedOutput = {
       type: SIGN_IN_SUCCESS,
       payload: {
-        token: 'token',
+        token: {
+          authToken: 'token',
+        },
       },
     };
 
