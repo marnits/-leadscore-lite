@@ -1,0 +1,23 @@
+.Input {
+  border-width: 0;
+  border-radius: 6px;
+  background-color: white;
+  outline: none;
+  padding: 6px 16px;
+  font-size: 12px;
+  background-color: #ffffff;
+  color: #545454;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Input:hover, .Input:focus {
+  background-color: #f1efef;
+}
+
+.InputWithLabel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

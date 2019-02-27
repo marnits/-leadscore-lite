@@ -1,4 +1,4 @@
-import { catchError, mergeMap, map } from 'rxjs/operators';
+import { mergeMap, map } from 'rxjs/operators';
 import { ofType } from 'redux-observable';
 
 import { SIGN_IN_REQUEST } from '../../constants/actionTypes';
@@ -19,10 +19,9 @@ export default (action$, state$, { ajax }) => action$.pipe(
         password,
       }),
     }).pipe(
-      map(({ token }) => (
+      map(({ response: { token } }) => (
         signInSuccess(token)
       )),
-      catchError(() => {}),
     )
   )),
 );

@@ -7,7 +7,7 @@ const initialState = {
   token: null,
 };
 
-const authentication = (state = initialState, { type, payload }) => {
+export default (state = initialState, { type, payload }) => {
   switch (type) {
     case SIGN_IN_SUCCESS:
       return {
@@ -20,5 +20,3 @@ const authentication = (state = initialState, { type, payload }) => {
       return state;
   }
 };
-
-export default authentication;

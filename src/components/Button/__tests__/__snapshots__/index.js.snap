@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render component properly 1`] = `
+<button
+  className="Button "
+  onClick={[Function]}
+  type="button"
+>
+  test
+</button>
+`;
+
+exports[`Label should render component properly 1`] = `
+<button
+  className="Button "
+  type="button"
+>
+  label
+</button>
+`;
+
+exports[`Label should render component properly 2`] = `
+<button
+  className="Button "
+  type="button"
+>
+  label
+</button>
+`;
