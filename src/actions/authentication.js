@@ -13,10 +13,10 @@ export const signInRequest = (username, password) => ({
   },
 });
 
-export const signInSuccess = token => ({
+export const signInSuccess = authToken => ({
   type: SIGN_IN_SUCCESS,
   payload: {
-    token,
+    authToken,
   },
 });
 

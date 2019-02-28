@@ -4,8 +4,13 @@ import renderer from 'react-test-renderer';
 import TextInput from '../index';
 
 describe('TextInput', () => {
-  test('should render TextInput', () => {
+  test('should render TextInput without label', () => {
     const tree = renderer.create(<TextInput id="input" value="" onChange={() => {}} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('should render TextInput with label', () => {
+    const tree = renderer.create(<TextInput label="test" id="input" value="" onChange={() => {}} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

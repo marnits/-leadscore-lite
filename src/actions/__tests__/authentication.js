@@ -29,7 +29,7 @@ describe('authentication actions', () => {
     const expectedAction = {
       type: SIGN_IN_SUCCESS,
       payload: {
-        token: 'token',
+        authToken: 'token',
       },
     };
 

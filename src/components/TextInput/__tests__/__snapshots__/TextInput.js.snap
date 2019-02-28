@@ -14,3 +14,37 @@ exports[`TextInput should render TextInput 1`] = `
   />
 </div>
 `;
+
+exports[`TextInput should render TextInput with label 1`] = `
+<div
+  className="InputWithLabel"
+>
+  <label
+    className="Label"
+    htmlFor="input"
+  >
+    test
+  </label>
+  <input
+    className="Input"
+    id="input"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`TextInput should render TextInput without label 1`] = `
+<div
+  className="InputWithLabel"
+>
+  <input
+    className="Input"
+    id="input"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;

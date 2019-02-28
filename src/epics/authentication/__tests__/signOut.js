@@ -9,9 +9,7 @@ import signOut from '../signOut';
 
 const state = {
   authentication: {
-    token: {
-      authToken: 'token!',
-    },
+    authToken: 'token!',
   },
 };
 
