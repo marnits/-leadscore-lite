@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contacts should properly render all children 1`] = `
+<div
+  className="list"
+>
+  <div
+    className="wrapper"
+  >
+    <div
+      className="title"
+    >
+      <span
+        className="Header"
+      >
+        Contacts
+      </span>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="
+                column-name
+                align-content-left
+                flex-3
+              "
+      >
+        <label
+          className="Label"
+          htmlFor={null}
+        >
+          Name
+        </label>
+      </div>
+      <div
+        className="
+                column-name
+                align-content-left
+                flex-2
+              "
+      >
+        <label
+          className="Label"
+          htmlFor={null}
+        >
+          Email
+        </label>
+      </div>
+      <div
+        className="
+                column-name
+                align-content-right
+                flex-1
+              "
+      >
+        <label
+          className="Label"
+          htmlFor={null}
+        >
+          Phone Number
+        </label>
+      </div>
+    </div>
+    <div
+      className="list"
+      onScroll={[Function]}
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="
+          align-content-left
+          column
+          flex-3
+        "
+        >
+          <span
+            className="text strong"
+          >
+            Test Test
+          </span>
+        </div>
+        <div
+          className="
+          align-content-left
+          column
+          flex-2
+        "
+        >
+          <span
+            className="text false"
+          >
+            abc@xyz.io
+          </span>
+        </div>
+        <div
+          className="
+          align-content-right
+          column
+          flex-1
+        "
+        >
+          <span
+            className="text false"
+          >
+            +48 423 231 543
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="shadow"
+      style={
+        Object {
+          "width": 0,
+        }
+      }
+    />
+  </div>
+</div>
+`;

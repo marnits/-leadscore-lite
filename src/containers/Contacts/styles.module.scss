@@ -1,17 +1,7 @@
-.wrapper {
-  background-color: #f9f8f8;
-  height: 100vh;
-  width: 100%;
-  flex-wrap: nowrap;
+.list {
   display: flex;
-  flex-basis: auto;
-}
-
-.navbar {
-  height: 30px;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding: 8px;
+  padding: 40px 300px;
 }

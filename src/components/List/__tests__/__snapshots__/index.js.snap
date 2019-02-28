@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should properly render list without children 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="title"
+  >
+    <span
+      className="Header"
+    >
+      Test list
+    </span>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="
+                column-name
+                align-content-undefined
+                flex-undefined
+              "
+    >
+      <label
+        className="Label"
+        htmlFor={null}
+      >
+        test1
+      </label>
+    </div>
+  </div>
+  <div
+    className="list"
+    onScroll={[Function]}
+  >
+    <div
+      className="empty"
+    >
+      <span
+        className="text false"
+      >
+        There are no elements
+      </span>
+    </div>
+  </div>
+  <div
+    className="shadow"
+    style={
+      Object {
+        "width": 0,
+      }
+    }
+  />
+</div>
+`;

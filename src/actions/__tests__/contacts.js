@@ -40,10 +40,11 @@ describe('contacts actions', () => {
           firstName: 'Test',
           lastName: 'Testov',
         }],
+        total: 50,
       },
     };
 
-    expect(fetchContactsSuccess([{ firstName: 'Test', lastName: 'Testov' }]))
+    expect(fetchContactsSuccess([{ firstName: 'Test', lastName: 'Testov' }], 50))
       .toMatchObject(expectedAction);
   });
 });

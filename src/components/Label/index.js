@@ -6,8 +6,12 @@ const Label = ({ htmlFor, text }) => (
   <label htmlFor={htmlFor} className={styles.Label}>{text}</label>
 );
 
+Label.defaultProps = {
+  htmlFor: null,
+};
+
 Label.propTypes = {
-  htmlFor: PropTypes.string.isRequired,
+  htmlFor: PropTypes.string,
   text: PropTypes.string.isRequired,
 };
 

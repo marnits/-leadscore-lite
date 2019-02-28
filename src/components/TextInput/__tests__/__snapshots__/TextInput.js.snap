@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput should render TextInput 1`] = `
-<div
-  className="InputWithLabel"
->
-  
-  <input
-    className="Input null"
-    id="input"
-    onChange={[Function]}
-    type="text"
-    value=""
-  />
-</div>
-`;
-
 exports[`TextInput should render TextInput with label 1`] = `
 <div
   className="InputWithLabel"

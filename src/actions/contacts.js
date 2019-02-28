@@ -10,9 +10,10 @@ export const fetchContactsRequest = (limit = 25) => ({
   },
 });
 
-export const fetchContactsSuccess = contacts => ({
+export const fetchContactsSuccess = (contacts, total) => ({
   type: FETCH_CONTACTS_SUCCESS,
   payload: {
     contacts,
+    total,
   },
 });

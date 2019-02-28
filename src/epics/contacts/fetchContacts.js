@@ -23,7 +23,7 @@ export default (action$, state$, { ajax }) => action$.pipe(
       },
       body: JSON.stringify({}),
     }).pipe(
-      map(({ response: { data } }) => fetchContactsSuccess(data.map(mapContact))),
+      map(({ response: { data, count } }) => fetchContactsSuccess(data.map(mapContact), count)),
     );
   }),
 );
