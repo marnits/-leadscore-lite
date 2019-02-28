@@ -4,7 +4,7 @@ import {
 } from '../constants/actionTypes';
 
 const initialState = {
-  token: null,
+  authToken: null,
 };
 
 export default (state = initialState, { type, payload }) => {
@@ -12,7 +12,7 @@ export default (state = initialState, { type, payload }) => {
     case SIGN_IN_SUCCESS:
       return {
         ...state,
-        token: payload.token,
+        authToken: payload.authToken,
       };
     case SIGN_OUT_SUCCESS:
       return initialState;

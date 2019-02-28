@@ -12,7 +12,7 @@ export default (
 ) => action$.pipe(
   ofType(SIGN_OUT_REQUEST),
   withLatestFrom(state$),
-  mergeMap(([, { authentication: { token } }]) => (
+  mergeMap(([, { authentication: { authToken } }]) => (
     ajax({
       url: SIGN_OUT_URL,
       method: 'POST',
@@ -20,7 +20,7 @@ export default (
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        authToken: token && token.authToken,
+        authToken,
       }),
     }).pipe(
       map(signOutSuccess),

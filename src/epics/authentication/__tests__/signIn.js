@@ -29,9 +29,7 @@ describe('signIn epic', () => {
     const expectedOutput = {
       type: SIGN_IN_SUCCESS,
       payload: {
-        token: {
-          authToken: 'token',
-        },
+        authToken: 'token',
       },
     };
 

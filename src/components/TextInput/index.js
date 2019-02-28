@@ -21,7 +21,7 @@ const TextInput = ({
         type={type}
         id={id}
         onChange={onInputChange}
-        className={`${styles.Input} ${value ? 'Input-initialized' : null}`}
+        className={styles.Input}
         value={value}
       />
     </div>
@@ -29,7 +29,7 @@ const TextInput = ({
 };
 
 TextInput.defaultProps = {
-  label: '',
+  label: null,
   type: 'text',
 };
 

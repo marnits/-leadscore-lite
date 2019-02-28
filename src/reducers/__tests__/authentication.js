@@ -7,34 +7,34 @@ import {
 describe('authentication reducer', () => {
   test('should return the initial state', () => {
     expect(reducer(undefined, {})).toMatchObject({
-      token: null,
+      authToken: null,
     });
   });
 
   test('should handle SIGN_IN_SUCCESS', () => {
     expect(
       reducer({
-        token: null,
+        authToken: null,
       }, {
         type: SIGN_IN_SUCCESS,
         payload: {
-          token: 'test',
+          authToken: 'test',
         },
       }),
     ).toMatchObject({
-      token: 'test',
+      authToken: 'test',
     });
   });
 
   test('should handle SIGN_OUT_SUCCESS', () => {
     expect(
       reducer({
-        token: 'test',
+        authToken: 'test',
       }, {
         type: SIGN_OUT_SUCCESS,
       }),
     ).toMatchObject({
-      token: null,
+      authToken: null,
     });
   });
 });

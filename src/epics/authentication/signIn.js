@@ -19,8 +19,8 @@ export default (action$, state$, { ajax }) => action$.pipe(
         password,
       }),
     }).pipe(
-      map(({ response: { token } }) => (
-        signInSuccess(token)
+      map(({ response: { token: { authToken } } }) => (
+        signInSuccess(authToken)
       )),
     )
   )),
