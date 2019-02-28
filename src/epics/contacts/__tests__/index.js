@@ -26,6 +26,7 @@ describe('fetchContacts epic', () => {
           emails: [{ email: 'abc@xyz.com' }],
           phoneNumbers: [{ number: '1111' }],
         }],
+        count: 50,
       },
     });
 
@@ -42,10 +43,11 @@ describe('fetchContacts epic', () => {
         contacts: [
           {
             name: 'test',
-            emails: [{ email: 'abc@xyz.com' }],
-            phoneNumbers: [{ number: '1111' }],
+            email: 'abc@xyz.com',
+            phoneNumber: '1111',
           },
         ],
+        total: 50,
       },
     };
 

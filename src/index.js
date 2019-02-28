@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Switch, BrowserRouter as Router } from 'react-router-dom';
 import SignIn from './containers/SignIn';
-import Contacts from './containers/Contacts';
+import Home from './containers/Home';
 import ProtectedRoute from './containers/ProtectedRoute';
 import UnprotectedRoute from './containers/UnprotectedRoute';
 import './index.scss';
@@ -17,7 +17,7 @@ const appComponent = (
       <Router>
         <Switch>
           <UnprotectedRoute exact path="/" component={SignIn} />
-          <ProtectedRoute path="/contacts" component={Contacts} />
+          <ProtectedRoute path="/home" component={Home} />
         </Switch>
       </Router>
     </PersistGate>

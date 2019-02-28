@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 const UnprotectedRoute = ({ hasPermission, ...props }) => (
   hasPermission
-    ? <Redirect to="/contacts" />
+    ? <Redirect to="/home" />
     : <Route {...props} />
 );
 

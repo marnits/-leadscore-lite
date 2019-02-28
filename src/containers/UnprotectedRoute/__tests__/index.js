@@ -10,7 +10,7 @@ describe('UnprotectedRoute', () => {
     const redirect = wrapper.find(Redirect);
 
     expect(redirect.exists()).toBe(true);
-    expect(redirect.prop('to')).toBe('/contacts');
+    expect(redirect.prop('to')).toBe('/home');
   });
 
   test('should render Redirect to base route when not allowed', () => {

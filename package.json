@@ -43,5 +43,18 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!/node_modules/",
+      "!src/index.js",
+      "!src/serviceWorker.js",
+      "!src/setupTests.js",
+      "!src/configureStore.js",
+      "!src/containers/**/index.js",
+      "!src/epics/index.js",
+      "!src/reducers/index.js"
+    ]
   }
 }
