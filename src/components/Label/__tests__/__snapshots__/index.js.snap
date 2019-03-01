@@ -2,7 +2,7 @@
 
 exports[`Label should render component properly 1`] = `
 <label
-  className="Label"
+  className="label"
   htmlFor="test"
 >
   label

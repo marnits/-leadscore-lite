@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { toast } from 'react-toastify';
 import SignIn from '../SignIn';
 import TextInput from '../../../components/TextInput';
@@ -50,6 +50,20 @@ describe('SignIn', () => {
     button.simulate('click');
 
     expect(spy).toHaveBeenCalledWith('Test Testov', 'secretest');
+  });
+
+  test('should call method that needs to prevent default form behaviour', () => {
+    const event = {
+      preventDefault: () => {},
+    };
+
+    const spy = jest.spyOn(event, 'preventDefault');
+    const wrapper = mount(<SignIn {...props} />);
+
+    const form = wrapper.find('form');
+    form.simulate('submit', event);
+
+    expect(spy).toHaveBeenCalled();
   });
 
   test('should show notification after getting error from props', () => {

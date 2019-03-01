@@ -8,7 +8,7 @@ const Button = ({
   className,
   type,
 }) => {
-  const classes = `${styles.Button} ${styles[className]}`;
+  const classes = `${styles.button} ${styles[className]}`;
 
   return <button type={type} className={classes} onClick={onClick}>{text}</button>;
 };
@@ -22,7 +22,7 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   className: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['button', 'submit']),
 };
 
 export default Button;

@@ -2,7 +2,7 @@
 
 exports[`Header should render component properly 1`] = `
 <span
-  className="Header"
+  className="header"
 >
   header
 </span>

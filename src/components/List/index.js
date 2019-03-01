@@ -37,13 +37,11 @@ class List extends PureComponent {
     return isCloseToTheBottom(this.scrollable) && !last && !loading;
   };
 
-  calculateShadowWidth = () => {
-    if (!this.scrollable) {
-      return 0;
-    }
-
-    return `${this.scrollable.clientWidth}px`;
-  };
+  calculateShadowWidth = () => (
+    this.scrollable
+      ? `${this.scrollable.clientWidth}px`
+      : 0
+  );
 
   handleScroll = () => {
     const { bottomReached } = this.state;

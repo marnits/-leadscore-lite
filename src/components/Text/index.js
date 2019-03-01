@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const Text = ({ text, strong }) => (
-  <span className={`${styles.text} ${!!strong && styles.strong}`}>{text}</span>
+  <span className={`${styles.text} ${strong && styles.strong}`}>{text}</span>
 );
 
 Text.defaultProps = {

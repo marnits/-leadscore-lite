@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const Label = ({ htmlFor, text }) => (
-  <label htmlFor={htmlFor} className={styles.Label}>{text}</label>
+  <label htmlFor={htmlFor} className={styles.label}>{text}</label>
 );
 
 Label.defaultProps = {

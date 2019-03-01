@@ -4,8 +4,8 @@ import { ofType } from 'redux-observable';
 import { FETCH_CONTACTS_REQUEST } from '../../constants/actionTypes';
 import { FETCH_CONTACTS_URL } from '../../constants/urls';
 import { fetchContactsSuccess } from '../../actions/contacts';
-import mapContact from './methods/mapContact';
-import generateUrl from './methods/generateUrl';
+import mapContact from '../../utils/methods/mapContact';
+import generateUrl from '../../utils/methods/generateUrl';
 
 export default (action$, state$, { ajax }) => action$.pipe(
   ofType(FETCH_CONTACTS_REQUEST),

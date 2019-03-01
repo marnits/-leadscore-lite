@@ -11,7 +11,14 @@ describe('Button', () => {
 
   test('should render component properly', () => {
     const handleClick = jest.fn();
-    const wrapper = shallow(<Button className="primary" text="test" onClick={handleClick} />);
+    const wrapper = shallow(
+      <Button
+        className="primary"
+        text="test"
+        onClick={handleClick}
+        type="submit"
+      />,
+    );
 
     wrapper.find('button').simulate('click');
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const Header = ({ text }) => (
-  <span className={styles.Header}>{text}</span>
+  <span className={styles.header}>{text}</span>
 );
 
 Header.propTypes = {

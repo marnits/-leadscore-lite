@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 const TextInput = ({
   value,
   onChange,
-  label,
+  placeholder,
   type,
   id,
 }) => {
@@ -21,19 +21,19 @@ const TextInput = ({
         onChange={onInputChange}
         className={styles.Input}
         value={value}
-        placeholder={label}
+        placeholder={placeholder}
       />
     </div>
   );
 };
 
 TextInput.defaultProps = {
-  label: null,
+  placeholder: null,
   type: 'text',
 };
 
 TextInput.propTypes = {
-  label: PropTypes.string,
+  placeholder: PropTypes.string,
   type: PropTypes.string,
   id: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
