@@ -1,11 +1,11 @@
 export default ({
   id,
   displayName,
-  emails = [],
-  phoneNumbers = [],
+  emails,
+  phoneNumbers,
 }) => {
-  const mappedEmails = emails.map(el => el.email);
-  const mappedPhoneNumbers = phoneNumbers.map(el => el.number);
+  const mappedEmails = Array.isArray(emails) ? emails.map(el => el.email) : [];
+  const mappedPhoneNumbers = Array.isArray(phoneNumbers) ? phoneNumbers.map(el => el.number) : [];
 
   return ({
     id,
