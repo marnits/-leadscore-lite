@@ -4,6 +4,7 @@ import List from '../../components/List';
 import Text from '../../components/Text';
 import ListItem from '../../components/List/components/ListItem';
 import styles from './styles.module.scss';
+import contactType from '../../utils/propTypes/contact';
 
 const columns = [{
   name: 'Name',
@@ -62,12 +63,7 @@ Contacts.propTypes = {
   loading: PropTypes.bool.isRequired,
   fetchContacts: PropTypes.func.isRequired,
   contactsById: PropTypes.arrayOf(PropTypes.string).isRequired,
-  contactsByHash: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    email: PropTypes.string,
-    phoneNumber: PropTypes.string,
-  }).isRequired,
+  contactsByHash: PropTypes.objectOf(contactType).isRequired,
 };
 
 export default Contacts;

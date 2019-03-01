@@ -6,6 +6,7 @@ import Label from '../Label';
 import Text from '../Text';
 import Spinner from '../Spinner';
 import styles from './styles.module.scss';
+import columnType from '../../utils/propTypes/column';
 
 const isScrolledToBottom = el => el.scrollHeight - el.scrollTop === el.clientHeight;
 const isCloseToTheBottom = el => el.scrollHeight - el.scrollTop <= el.clientHeight + 100;
@@ -134,15 +135,7 @@ List.propTypes = {
   last: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
-  columns: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
-    size: PropTypes.number,
-    align: PropTypes.oneOf([
-      'left',
-      'center',
-      'right',
-    ]),
-  })).isRequired,
+  columns: PropTypes.arrayOf(columnType).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),

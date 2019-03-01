@@ -12,6 +12,7 @@ const persistConfig = {
   storage,
   stateReconciler: autoMergeLevel2,
   timeout: 10000,
+  blacklist: ['contacts'],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);

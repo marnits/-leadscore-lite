@@ -1,6 +1,7 @@
 import {
   SIGN_IN_REQUEST,
   SIGN_IN_SUCCESS,
+  SIGN_IN_ERROR,
   SIGN_OUT_REQUEST,
   SIGN_OUT_SUCCESS,
 } from '../constants/actionTypes';
@@ -18,6 +19,10 @@ export const signInSuccess = authToken => ({
   payload: {
     authToken,
   },
+});
+
+export const signInError = () => ({
+  type: SIGN_IN_ERROR,
 });
 
 export const signOutRequest = () => ({

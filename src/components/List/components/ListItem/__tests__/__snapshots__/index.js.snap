@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem should render component properly 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="
+          column
+          align-content-left
+          flex-1
+        "
+  >
+    <p>
+      test
+    </p>
+  </div>
+  <div
+    className="
+          column
+          align-content-left
+          flex-1
+        "
+  >
+    <span>
+      test 2
+    </span>
+  </div>
+  <div
+    className="
+          column
+          align-content-left
+          flex-1
+        "
+  >
+    <span>
+      test 3
+    </span>
+  </div>
+</div>
+`;
+
+exports[`ListItem should render component properly 2`] = `
+<div
+  className="row"
+>
+  <div
+    className="
+          column
+          align-content-left
+          flex-1
+        "
+  >
+    <p>
+      Test
+    </p>
+  </div>
+  <div
+    className="
+          column
+          align-content-left
+          flex-1
+        "
+  >
+    <span>
+      test 2
+    </span>
+  </div>
+</div>
+`;

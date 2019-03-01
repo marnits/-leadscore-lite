@@ -1,12 +1,14 @@
 import {
   signInRequest,
   signInSuccess,
+  signInError,
   signOutRequest,
   signOutSuccess,
 } from '../authentication';
 import {
   SIGN_IN_REQUEST,
   SIGN_IN_SUCCESS,
+  SIGN_IN_ERROR,
   SIGN_OUT_REQUEST,
   SIGN_OUT_SUCCESS,
 } from '../../constants/actionTypes';
@@ -43,6 +45,15 @@ describe('authentication actions', () => {
     };
 
     expect(signOutRequest())
+      .toMatchObject(expectedAction);
+  });
+
+  test('should create SIGN_IN_ERROR action', () => {
+    const expectedAction = {
+      type: SIGN_IN_ERROR,
+    };
+
+    expect(signInError())
       .toMatchObject(expectedAction);
   });
 

@@ -1,9 +1,10 @@
-import { mergeMap, map } from 'rxjs/operators';
+import { of } from 'rxjs';
+import { catchError, mergeMap, map } from 'rxjs/operators';
 import { ofType } from 'redux-observable';
 
 import { SIGN_IN_REQUEST } from '../../constants/actionTypes';
 import { SIGN_IN_URL } from '../../constants/urls';
-import { signInSuccess } from '../../actions/authentication';
+import { signInSuccess, signInError } from '../../actions/authentication';
 
 export default (action$, state$, { ajax }) => action$.pipe(
   ofType(SIGN_IN_REQUEST),
@@ -19,9 +20,8 @@ export default (action$, state$, { ajax }) => action$.pipe(
         password,
       }),
     }).pipe(
-      map(({ response: { token: { authToken } } }) => (
-        signInSuccess(authToken)
-      )),
+      map(({ response: { token: { authToken } } }) => signInSuccess(authToken)),
+      catchError(() => of(signInError())),
     )
   )),
 );
