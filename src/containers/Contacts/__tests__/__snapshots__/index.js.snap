@@ -11,7 +11,7 @@ exports[`Contacts should properly render all children 1`] = `
       className="title"
     >
       <span
-        className="Header"
+        className="header"
       >
         Contacts
       </span>
@@ -27,7 +27,7 @@ exports[`Contacts should properly render all children 1`] = `
               "
       >
         <label
-          className="Label"
+          className="label"
           htmlFor={null}
         >
           Name
@@ -41,7 +41,7 @@ exports[`Contacts should properly render all children 1`] = `
               "
       >
         <label
-          className="Label"
+          className="label"
           htmlFor={null}
         >
           Email
@@ -55,7 +55,7 @@ exports[`Contacts should properly render all children 1`] = `
               "
       >
         <label
-          className="Label"
+          className="label"
           htmlFor={null}
         >
           Phone Number

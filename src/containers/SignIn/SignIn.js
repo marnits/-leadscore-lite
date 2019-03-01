@@ -47,28 +47,32 @@ class SignIn extends PureComponent {
     signIn(username, password);
   }
 
+  onSubmit = (event) => {
+    event.preventDefault();
+  }
+
   render() {
     const { username, password } = this.state;
 
     return (
       <div className={styles.wrapper}>
         <img src={logo} alt="Logo" width="350px" />
-        <div className={styles.form}>
+        <form onSubmit={this.onSubmit} className={styles.form}>
           <TextInput
             value={username}
             onChange={this.onUsernameChange}
-            label="Username"
+            placeholder="Username"
             id="user"
           />
           <TextInput
             value={password}
             onChange={this.onPasswordChange}
-            label="Password"
+            placeholder="Password"
             type="password"
             id="password"
           />
           <Button onClick={this.submit} text="Sign in" className="primary" type="submit" />
-        </div>
+        </form>
         <ToastContainer />
       </div>
     );

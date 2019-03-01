@@ -3,7 +3,9 @@ import {
   FETCH_CONTACTS_SUCCESS,
 } from '../constants/actionTypes';
 
-export const fetchContactsRequest = (limit = 25) => ({
+import { FETCH_CONTACTS_LIMIT } from '../constants/customizations';
+
+export const fetchContactsRequest = (limit = FETCH_CONTACTS_LIMIT) => ({
   type: FETCH_CONTACTS_REQUEST,
   payload: {
     limit,

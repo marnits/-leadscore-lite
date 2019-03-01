@@ -8,7 +8,7 @@ exports[`List should properly render list without children 1`] = `
     className="title"
   >
     <span
-      className="Header"
+      className="header"
     >
       Test list
     </span>
@@ -24,7 +24,7 @@ exports[`List should properly render list without children 1`] = `
               "
     >
       <label
-        className="Label"
+        className="label"
         htmlFor={null}
       >
         test1

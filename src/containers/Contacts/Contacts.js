@@ -4,21 +4,8 @@ import List from '../../components/List';
 import Text from '../../components/Text';
 import ListItem from '../../components/List/components/ListItem';
 import styles from './styles.module.scss';
+import columns from './columns';
 import contactType from '../../utils/propTypes/contact';
-
-const columns = [{
-  name: 'Name',
-  size: 3,
-  align: 'left',
-}, {
-  name: 'Email',
-  size: 2,
-  align: 'left',
-}, {
-  name: 'Phone Number',
-  size: 1,
-  align: 'right',
-}];
 
 class Contacts extends PureComponent {
   componentDidMount() {
@@ -27,10 +14,21 @@ class Contacts extends PureComponent {
     fetchContacts();
   }
 
+  renderItem = (id) => {
+    const { contactsByHash } = this.props;
+
+    return (
+      <ListItem key={id}>
+        <Text strong text={contactsByHash[id].name} />
+        <Text text={contactsByHash[id].email} />
+        <Text text={contactsByHash[id].phoneNumber} />
+      </ListItem>
+    );
+  };
+
   render() {
     const {
       contactsById,
-      contactsByHash,
       fetchContacts,
       loading,
       last,
@@ -45,13 +43,7 @@ class Contacts extends PureComponent {
           loading={loading}
           last={last}
         >
-          {contactsById.map(id => (
-            <ListItem key={id}>
-              <Text strong text={contactsByHash[id].name} />
-              <Text text={contactsByHash[id].email} />
-              <Text text={contactsByHash[id].phoneNumber} />
-            </ListItem>
-          ))}
+          {contactsById.map(this.renderItem)}
         </List>
       </div>
     );
