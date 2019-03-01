@@ -66,6 +66,7 @@ class List extends PureComponent {
 
   renderEmptyElements = () => {
     const { loading } = this.props;
+
     return !loading && (
       <div className={styles.empty}>
         <Text type="subdued" text="There are no elements" />
@@ -76,6 +77,23 @@ class List extends PureComponent {
   assignScrollableRef(scrollable) {
     this.scrollable = scrollable;
   }
+
+  renderColumn = ({
+    name,
+    align = 'left',
+    size = 1,
+  }) => (
+    <div
+      className={`
+        ${styles['column-name']}
+        ${styles[`align-content-${align}`]}
+        ${styles[`flex-${size}`]}
+      `}
+      key={name}
+    >
+      <Label type="small" text={name} />
+    </div>
+  );
 
   render() {
     const {
@@ -94,18 +112,7 @@ class List extends PureComponent {
           </div>
         )}
         <div className={styles.row}>
-          {columns.map(column => (
-            <div
-              className={`
-                ${styles['column-name']}
-                ${styles[`align-content-${column.align}`]}
-                ${styles[`flex-${column.size}`]}
-              `}
-              key={column.name}
-            >
-              <Label type="small" text={column.name} />
-            </div>
-          ))}
+          {columns.map(this.renderColumn)}
         </div>
         <div
           ref={this.assignScrollableRef}
@@ -129,6 +136,10 @@ class List extends PureComponent {
   }
 }
 
+List.defaultProps = {
+  children: null,
+};
+
 List.propTypes = {
   last: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
@@ -139,10 +150,6 @@ List.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
   ]),
   loadMore: PropTypes.func.isRequired,
-};
-
-List.defaultProps = {
-  children: null,
 };
 
 export default List;

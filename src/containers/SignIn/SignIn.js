@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
 import TextInput from '../../components/TextInput';
 import Button from '../../components/Button';
-import styles from './SignIn.module.scss';
+import styles from './styles.module.scss';
 import logo from './logo.png';
 import 'react-toastify/dist/ReactToastify.min.css';
 

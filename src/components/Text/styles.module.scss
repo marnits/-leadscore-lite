@@ -1,5 +1,8 @@
+@import "../../utils/styles/colors.scss";
+
 .text {
-  color: #131313;
+  composes: cut-text from "../../utils/styles/cut-text.scss";
+  color: $ink;
   font-size: 14px;
   line-height: 18px;
 }

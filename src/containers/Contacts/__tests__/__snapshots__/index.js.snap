@@ -21,10 +21,10 @@ exports[`Contacts should properly render all children 1`] = `
     >
       <div
         className="
-                column-name
-                align-content-left
-                flex-3
-              "
+        column-name
+        align-content-left
+        flex-3
+      "
       >
         <label
           className="label"
@@ -35,10 +35,10 @@ exports[`Contacts should properly render all children 1`] = `
       </div>
       <div
         className="
-                column-name
-                align-content-left
-                flex-2
-              "
+        column-name
+        align-content-left
+        flex-2
+      "
       >
         <label
           className="label"
@@ -49,10 +49,10 @@ exports[`Contacts should properly render all children 1`] = `
       </div>
       <div
         className="
-                column-name
-                align-content-right
-                flex-1
-              "
+        column-name
+        align-content-right
+        flex-1
+      "
       >
         <label
           className="label"

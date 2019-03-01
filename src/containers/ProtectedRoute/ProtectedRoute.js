@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
-import SIGN_IN_ROUTE from '../../constants/customizations';
+import { SIGN_IN_ROUTE } from '../../constants/customizations';
 
 const ProtectedRoute = ({ hasPermission, ...props }) => (
   hasPermission
