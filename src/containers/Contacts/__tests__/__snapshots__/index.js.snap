@@ -71,8 +71,8 @@ exports[`Contacts should properly render all children 1`] = `
       >
         <div
           className="
-          align-content-left
           column
+          align-content-left
           flex-3
         "
         >
@@ -84,8 +84,8 @@ exports[`Contacts should properly render all children 1`] = `
         </div>
         <div
           className="
-          align-content-left
           column
+          align-content-left
           flex-2
         "
         >
@@ -97,8 +97,8 @@ exports[`Contacts should properly render all children 1`] = `
         </div>
         <div
           className="
-          align-content-right
           column
+          align-content-right
           flex-1
         "
         >

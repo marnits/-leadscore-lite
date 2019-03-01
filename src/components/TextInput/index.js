@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Label from '../Label';
 import styles from './styles.module.scss';
 
 const TextInput = ({
@@ -16,13 +15,13 @@ const TextInput = ({
 
   return (
     <div className={styles.InputWithLabel}>
-      {label && <Label htmlFor={id} text={label} />}
       <input
         type={type}
         id={id}
         onChange={onInputChange}
         className={styles.Input}
         value={value}
+        placeholder={label}
       />
     </div>
   );

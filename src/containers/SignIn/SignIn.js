@@ -1,14 +1,32 @@
 import React, { PureComponent } from 'react';
 import { PropTypes } from 'prop-types';
+import { ToastContainer, toast } from 'react-toastify';
 import TextInput from '../../components/TextInput';
 import Button from '../../components/Button';
 import styles from './SignIn.module.scss';
+import logo from './logo.png';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 class SignIn extends PureComponent {
   state = {
     username: '',
     password: '',
   };
+
+  componentDidUpdate(prevProps) {
+    const { error } = this.props;
+    if (!prevProps.error && error) {
+      this.notify();
+    }
+  }
+
+  notify = () => {
+    toast.error('Wrong username or password!', {
+      className: styles.notification,
+      autoClose: 2500,
+      hideProgressBar: true,
+    });
+  }
 
   onUsernameChange = (text) => {
     this.setState({
@@ -34,6 +52,7 @@ class SignIn extends PureComponent {
 
     return (
       <div className={styles.wrapper}>
+        <img src={logo} alt="Logo" width="350px" />
         <div className={styles.form}>
           <TextInput
             value={username}
@@ -50,6 +69,7 @@ class SignIn extends PureComponent {
           />
           <Button onClick={this.submit} text="Sign in" className="primary" type="submit" />
         </div>
+        <ToastContainer />
       </div>
     );
   }
@@ -57,6 +77,7 @@ class SignIn extends PureComponent {
 
 SignIn.propTypes = {
   signIn: PropTypes.func.isRequired,
+  error: PropTypes.bool.isRequired,
 };
 
 export default SignIn;
