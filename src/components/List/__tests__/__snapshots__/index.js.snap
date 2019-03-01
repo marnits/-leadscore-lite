@@ -18,10 +18,10 @@ exports[`List should properly render list without children 1`] = `
   >
     <div
       className="
-                column-name
-                align-content-undefined
-                flex-undefined
-              "
+        column-name
+        align-content-left
+        flex-1
+      "
     >
       <label
         className="label"

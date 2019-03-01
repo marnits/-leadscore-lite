@@ -5,7 +5,7 @@ import './styles.scss';
 const Spinner = ({
   className,
 }) => (
-  <div className={`Spinner ${className}`} />
+  <div className={`spinner ${className}`} />
 );
 
 Spinner.defaultProps = {

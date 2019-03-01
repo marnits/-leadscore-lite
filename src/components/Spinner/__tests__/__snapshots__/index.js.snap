@@ -2,6 +2,6 @@
 
 exports[`Spinner should render spinner 1`] = `
 <div
-  className="Spinner medium"
+  className="spinner medium"
 />
 `;

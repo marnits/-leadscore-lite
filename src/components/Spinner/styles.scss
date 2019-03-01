@@ -1,7 +1,9 @@
-.Spinner {
+@import "../../utils/styles/colors.scss";
+
+.spinner {
   margin: 24px auto;
   animation: rotate 0.8s infinite linear;
-  border: 2px solid #ffd532;
+  border: 2px solid $spinner--color;
   border-right-color: transparent;
   border-radius: 50%;
 }
@@ -22,7 +24,7 @@
 }
 
 .inverseColor {
-  border-color: #ffffff;
+  border-color: $white;
   border-right-color: transparent;
 }
 

@@ -1,5 +1,7 @@
+@import "../../utils/styles/colors.scss";
+
 .label {
   font-size: 12px;
-  color: #545454;
+  color: $ink;
   font-weight: bold;
 }

@@ -1,4 +1,8 @@
+@import "../../utils/styles/colors.scss";
+
 .header {
+  composes: cut-text from "../../utils/styles/cut-text.scss";
+  color: $ink;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;

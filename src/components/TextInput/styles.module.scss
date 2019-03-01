@@ -1,3 +1,5 @@
+@import "../../utils/styles/colors.scss";
+
 .Input {
   border-width: 0;
   border-radius: 6px;
@@ -5,13 +7,13 @@
   outline: none;
   padding: 6px 16px;
   font-size: 12px;
-  background-color: #ffffff;
-  color: #545454;
+  background-color: $white;
+  color: $ink;
   font-weight: bold;
   width: 100%;
   box-sizing: border-box;
 }
 
 .Input:hover, .Input:focus {
-  background-color: #f1efef;
+  background-color: $input--hover;
 }

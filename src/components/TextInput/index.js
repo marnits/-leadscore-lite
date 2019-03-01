@@ -34,7 +34,7 @@ TextInput.defaultProps = {
 
 TextInput.propTypes = {
   placeholder: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['text', 'password']),
   id: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,

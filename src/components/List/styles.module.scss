@@ -1,17 +1,19 @@
+@import "../../utils/styles/colors.scss";
+
 .wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid $border--color;
 
   .title {
     padding-bottom: 16px;
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid $border--color;
   }
 
   .list {
-    background-color: #fbfcfd;
+    background-color: $white;
     flex-grow: 1;
     overflow-y: auto;
   }
@@ -27,17 +29,17 @@
   }
 
   .empty {
-    border: 1px solid #dedede;
+    border: 1px solid $border--color;
     border-bottom: 0;
     border-radius: 1px;
     padding: 16px;
-    box-shadow: inset 0 0 0 0 #dedede;
+    box-shadow: inset 0 0 0 0 $border--color;
     outline: none;
     text-align: center;
   }
 
   .shadow {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $white);
     width: 100%;
     position: absolute;
     height: 71px;
